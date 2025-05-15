@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simposium CELC 2025</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <section class="banner">
+    <div class="content">
+        <img src="logo.png" alt="Logo del Simposium CELC 2025" class="logo" />
+        <h1>Simposium CELC 2025</h1>
+        <p>Junio 6 - 7, 2025</p>
+            <div class="countdown">
+            <div><span id="days">0</span><p>Días</p></div>
+            <div><span id="hours">0</span><p>Horas</p></div>
+            <div><span id="minutes">0</span><p>Minutos</p></div>
+            <div><span id="seconds">0</span><p>Segundos</p></div>
+        </div>
+
+        <button onclick="window.location.href='#'">Descubrir Más</button>
+        <button class="register-btn" onclick="window.location.href='#'">Regístrate</button>
+    </div>
+
+    <!-- Formulario a la derecha -->
+    <section class="form-section">
+        <form class="form-container" id="inscripcionForm">
+            <h2>Inscripción Simposium</h2>          
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" required placeholder="Daniela Puentes" />
+            <label for="carrera">Carrera a inscribirse</label>
+            <select id="carrera" required>
+                <option value="" disabled selected>Selecciona una</option>
+                <option>Licenciatura Arquitectura</option>
+                <option>Licenciatura en Derecho</option>
+                <option>Licenciatura en Administración de Empresas Turísticas</option>
+                <option>Contabilidad Pública</option>
+                <option>Licenciatura en Sistemas Computacionales y Administrativos</option>
+            </select>
+
+            <label for="email">Correo electrónico completo</label>
+            <input type="email" id="email" required placeholder="danielapuentes@gmail.com" />
+
+            <label for="telefono">Teléfono de contacto</label>
+            <input type="tel" id="telefono" required placeholder="(123) 456-7890" />
+
+            <button type="submit" class="btn">Enviar por WhatsApp</button>
+
+            <div class="bank">
+                <div>  BBVA Nombre de <b>Edmundo Carlos Rivera García</b>s</div>
+                <div class="bank-number" id="bankNumber"> BBVA: 
+                        Cuenta CLABE: 012 060 01510861110 7
+                        Mi cuenta BBVA: 
+                        Tarjeta de débito: 4152 3142 5113 7322
+                      </div>
+                <button type="button" class="copy-btn" id="copyBtn">
+                    <i class="fas fa-copy" aria-hidden="true"></i>
+                    <span>Copiar número de cuenta</span>
+                </button>
+            </div>
+        </form>
+    </section>
+</section>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

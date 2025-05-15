@@ -1,0 +1,217 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #982a46);
+    color: #333;
+    height: 100%;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 50px 80px;
+    text-align: left;
+    color: #982a46;
+}
+
+.content {
+    max-width: 600px;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 150px;
+    height: auto;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin: 100px 0 10px;
+    color: #982a46;
+}
+
+.content p {
+    margin: 5px 0;
+    font-size: 22px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.countdown span {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #982a46;
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #ff5e78;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e04b64;
+}
+
+.register-btn {
+    background-color: #00c896;
+}
+
+.register-btn:hover {
+    background-color: #009f75;
+}
+
+.form-section {
+    width: 500px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-left: -280px; 
+}
+
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+    gap: 20px;
+}
+
+.form-container h2,
+.form-container .info,
+.form-container .btn,
+.bank {
+    grid-column: 1 / -1; 
+    text-align: center;
+
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botón principal */
+.form-container .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00c896;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.form-container .btn:hover {
+    background-color: #009f75;
+}
+
+.bank {
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.bank-number {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.copy-btn {
+    padding: 10px 20px;
+    background-color: #982a46;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #7c1f38;
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100px;
+        top: 10px;
+        left: 20px;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+        height: auto; /* Ajuste automático de altura */
+    }
+
+    .content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .form-section {
+        width: 100%; /* Ocupa todo el ancho */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        padding: 20px;
+    }
+
+    .form-container {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+
+    .form-container h2,
+    .form-container .info,
+    .form-container .btn,
+    .bank {
+        text-align: center;
+    }
+}
+
+
