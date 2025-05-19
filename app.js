@@ -93,7 +93,7 @@ document.getElementById('inscripcionForm').addEventListener('submit', function(e
         console.log(data); // ✅ Verifica la respuesta de PHP
         if (data.success) {
             const mensaje = `Hola, soy ${nombre} y me inscribo en ${carrera}. Mi email es ${email} y mi teléfono ${telefono}.`;
-            const whatsappURL = `https://wa.me/5218712194723?text=${encodeURIComponent(mensaje)}`;
+            const whatsappURL = `https://wa.me/5218715986114?text=${encodeURIComponent(mensaje)}`;
             window.open(whatsappURL, '_blank');
         } else {
             alert('Error al guardar el registro.');
