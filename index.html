@@ -9,7 +9,7 @@
 <body>
     <section class="banner">
     <div class="content">
-        <img src="logo.png" alt="Logo del Simposium CELC 2025" class="logo" />
+        <img src="logo_uni.png"Logo del Simposium CELC 2025" class="logo" />
         <h1>Simposium CELC 2025</h1>
         <p>Junio 6 - 7, 2025</p>
             <div class="countdown">
@@ -19,7 +19,7 @@
             <div><span id="seconds">0</span><p>Segundos</p></div>
         </div>
 
-        <button onclick="window.location.href='#'">Descubrir Más</button>
+        <button onclick="window.location.href='#'">Descubrir más</button>
         <button class="register-btn" onclick="window.location.href='#'">Regístrate</button>
     </div>
 
@@ -48,11 +48,11 @@
             <button type="submit" class="btn">Enviar por WhatsApp</button>
 
             <div class="bank">
-                <div>  BBVA Nombre de <b>Edmundo Carlos Rivera García</b>s</div>
-                <div class="bank-number" id="bankNumber"> BBVA: 
-                        Cuenta CLABE: 012 060 01510861110 7
-                        Mi cuenta BBVA: 
-                        Tarjeta de débito: 4152 3142 5113 7322
+                <div>  BBVA Nombre de <b>Edmundo Carlos Rivera García.</b></div>
+                <div class="bank-number" id="bankNumber"> BBVA: <br>
+                        cuenta clabe: 012 060 01510861110 7 <br>
+                        Mi cuenta BBVA: <br>
+                        Tarjeta de débito: <br> 4152 3142 5113 7322
                       </div>
                 <button type="button" class="copy-btn" id="copyBtn">
                     <i class="fas fa-copy" aria-hidden="true"></i>
@@ -62,8 +62,24 @@
         </form>
     </section>
 </section>
+ <div class="container">
+        <h3>Simposium CELC 2025</h3>
+        <p class="subtitle">
+           Acompáñanos en este simposium único, donde la innovación, el conocimiento y las oportunidades de crecimiento se reúnen en un solo lugar. ¡Prepárate para transformar tu visión de la educación y el futuro profesional!"
+        </p>
 
+        <div class="days">
+            <button class="day-btn" onclick="showSchedule(0)">Licenciatura en Derecho</button>
+            <button class="day-btn active" onclick="showSchedule(1)">Licenciatura en Arquitectura</button>
+            <button class="day-btn" onclick="showSchedule(2)">Licenciatura en Administración de Empresas Turísticas</button>
+            <button class="day-btn" onclick="showSchedule(3)">Contabilidad Pública</button>
+             <button class="day-btn" onclick="showSchedule(4)">Licenciatura en Sistemas Computacionales y Administrativos</button>
+        </div>
 
+        <div id="schedule"></div>
+    </div>
     <script src="app.js"></script>
+   
+
 </body>
 </html>
