@@ -30,12 +30,13 @@ const schedules = [
         { time: "10:00 am - 11:00 am", topic: "Entrepreneurship Growth", speaker: "Laura Smith", venue: "Manhattan Club NYC" }
     ],
     [
-        { time: "09:00 am - 10:00 am", topic: "AI in Marketing", speaker: "Alan Turing", venue: "Tech Hub" },
+        { time: "09:00 am - 10:00 am", topic: "AI in Marketing", speaker: "Alan ", venue: "Tech Hub" },
         { time: "10:00 am - 11:00 am", topic: "Future of Work", speaker: "Elena White", venue: "Main Auditorium" }
     ],
     [
-        { time: "09:00 am - 10:00 am", topic: "Business Networking", speaker: "John Doe", venue: "Grand Hall" },
-        { time: "10:00 am - 11:00 am", topic: "Marketing Funnels", speaker: "Emily Clark", venue: "Grand Hall" }
+        { time: "9:30 am", topic: "Contabilidad Pública", speaker: "Dr. Josué Cabañas", venue: "Tu agenda bajo control. Gestión Eficiente del Tiempo." },
+       { time: "10:30 am", topic: "Contabilidad Pública", speaker: "C.P.C. Brenda Elisa López Ramírez", venue: "De cero a inversor" },
+       { time: "11:30 am", topic: "Contabilidad Pública", speaker: "C.P.C. Juan José Rosado Robledo", venue: "Conociendo de Prevención de Lavado de Dinero." }
     ],
      [
         { time: "09:00 am - 10:00 am", topic: "Business Networking", speaker: "John Doe", venue: "Grand Hall" },
@@ -94,7 +95,7 @@ document.getElementById('inscripcionForm').addEventListener('submit', async func
         if (result.success) {
             const mensaje = `Hola, soy ${nombre} y me inscribo en ${carrera}. Mi email es ${email} y mi teléfono ${telefono}.`;
             const whatsappURL = `https://wa.me/5218715986114?text=${encodeURIComponent(mensaje)}`;
-            window.open(whatsappURL, '_blank');
+            window.open(whatsappURL);
         } else {
             alert('Error al guardar el registro.');
         }
