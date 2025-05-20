@@ -67,8 +67,7 @@ function showSchedule(dayIndex) {
 
 // Load Day 02 by default
 showSchedule(1);
-
-document.getElementById('inscripcionForm').addEventListener('submit', function(e) {
+document.getElementById('inscripcionForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const nombre = document.getElementById('nombre').value;
@@ -76,29 +75,29 @@ document.getElementById('inscripcionForm').addEventListener('submit', function(e
     const email = document.getElementById('email').value;
     const telefono = document.getElementById('telefono').value;
 
-    console.log({ nombre, carrera, email, telefono }); // ✅ Verifica que tenga datos
+    console.log({ nombre, carrera, email, telefono }); // ✅ Verifica datos
 
-    const formData = new FormData();
-    formData.append('nombre', nombre);
-    formData.append('carrera', carrera);
-    formData.append('email', email);
-    formData.append('telefono', telefono);
+    const data = { nombre, carrera, email, telefono };
 
-    fetch('registrar.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data); // ✅ Verifica la respuesta de PHP
-        if (data.success) {
+    try {
+        const response = await fetch('/api/registrar', {  // ✅ Cambiar a la ruta de tu API en Vercel
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        console.log(result);
+
+        if (result.success) {
             const mensaje = `Hola, soy ${nombre} y me inscribo en ${carrera}. Mi email es ${email} y mi teléfono ${telefono}.`;
             const whatsappURL = `https://wa.me/5218715986114?text=${encodeURIComponent(mensaje)}`;
             window.open(whatsappURL, '_blank');
         } else {
             alert('Error al guardar el registro.');
         }
-    })
-    .catch(err => console.error('Error en la petición:', err));
+    } catch (error) {
+        console.error('Error al enviar datos:', error);
+        alert('Error de red o de servidor.');
+    }
 });
-
