@@ -103,3 +103,12 @@ document.getElementById('inscripcionForm').addEventListener('submit', async func
         alert('Error de red o de servidor.');
     }
 });
+
+
+function copiarCuenta() {
+  const cuenta = document.getElementById('bankNumber').innerText;
+  navigator.clipboard.writeText(cuenta)
+    .then(() => alert('Número de cuenta copiado al portapapeles.'))
+    .catch(() => alert('Error al copiar el número.'));
+}
+

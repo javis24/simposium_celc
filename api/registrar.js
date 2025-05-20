@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
         await sheets.spreadsheets.values.append({
             spreadsheetId,
-            range: 'A:E', // 5 columnas: A - E
+            range: 'A:E', 
             valueInputOption: 'USER_ENTERED',
             requestBody: {
                 values: [[nombre, carrera, email, telefono, fecha]],
