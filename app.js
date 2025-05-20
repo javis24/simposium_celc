@@ -67,6 +67,8 @@ function showSchedule(dayIndex) {
 
 // Load Day 02 by default
 showSchedule(1);
+
+
 document.getElementById('inscripcionForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
